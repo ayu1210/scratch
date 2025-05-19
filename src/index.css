@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fade-in for speech bubble */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Custom scrollbar for commands list */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 102, 241, 0.3); /* Indigo tint */
+  border-radius: 4px;
+}
+
+/* Import a nice font */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Background gradient already applied in App */
+
+/* Buttons focus outline for accessibility */
+button:focus-visible {
+  outline: 2px solid #4f46e5; /* Indigo */
+  outline-offset: 2px;
+}
